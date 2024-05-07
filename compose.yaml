@@ -1,0 +1,13 @@
+version: '3'
+
+networks:
+  restaurante-network:
+
+services:
+  mongodb-restaurante:
+    image: "mongo"
+    container_name: "mongodb-restaurante"
+    ports:
+      - "27017:27017"
+    networks:
+      - restaurante-network
